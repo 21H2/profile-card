@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title id="dynamic-title">Umesh Sharma - Just a Lost Soul</title>
-  <link rel="icon" href="https://media.tenor.com/sTdFxS_aOXMAAAAM/dancing-cute.gif" type="image/gif"> <!-- Favicon -->
+  <link rel="icon" href="https://media.tenor.com/sTdFxS_aOXMAAAAM/dancing-cute.gif" type="image/gif">
   <link href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" rel="stylesheet" />
   <style>
     body {
@@ -47,7 +47,7 @@
     .card {
       position: relative;
       width: 90%;
-      max-width: 900px; /* Increased for better desktop visibility */
+      max-width: 900px;
       padding: 2rem;
       border-radius: 1.5rem;
       background: rgba(0, 0, 0, 0.7);
@@ -55,24 +55,13 @@
       backdrop-filter: blur(10px);
       overflow: hidden;
       box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-      animation: glowAnimation 3s infinite alternate, slideIn 0.5s ease forwards; /* Added slide-in animation */
+      animation: glowAnimation 3s infinite alternate;
     }
 
     @keyframes glowAnimation {
       0% { box-shadow: 0 0 20px rgba(255, 20, 147, 1); }
       50% { box-shadow: 0 0 30px rgba(128, 0, 128, 1); }
       100% { box-shadow: 0 0 20px rgba(255, 255, 255, 1); }
-    }
-
-    @keyframes slideIn {
-      from {
-        transform: translateY(-50px);
-        opacity: 0;
-      }
-      to {
-        transform: translateY(0);
-        opacity: 1;
-      }
     }
 
     .profile-pic {
@@ -83,34 +72,35 @@
       object-fit: cover;
       box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
       transition: transform 0.3s, box-shadow 0.3s, filter 1s;
-      animation: fadeIn 0.5s ease forwards; /* Added fade-in animation */
     }
 
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
+    .profile-pic:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 1);
+    }
+
+    .info h1, .info p {
+      color: white;
+      animation: fadeIn 1s forwards;
     }
 
     .info h1 {
-      color: white;
       font-size: 2.8rem;
       margin-bottom: 0.5rem;
       text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
       transition: text-shadow 0.3s;
-      animation: fadeIn 0.5s ease forwards; /* Added fade-in animation */
     }
 
     .info p {
-      color: rgba(255, 255, 255, 0.9);
       font-size: 1.5rem;
       margin-bottom: 1.5rem;
       line-height: 1.5;
       transition: text-shadow 0.3s;
-      animation: fadeIn 0.5s ease forwards; /* Added fade-in animation */
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(-20px); }
+      100% { opacity: 1; transform: translateY(0); }
     }
 
     .social-links a {
@@ -118,6 +108,7 @@
       font-size: 1.5rem;
       margin-right: 1rem;
       transition: transform 0.3s, color 0.3s;
+      animation: fadeIn 1s forwards;
     }
 
     .social-links a:hover {
@@ -127,7 +118,7 @@
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid */
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
       gap: 1rem;
       margin-top: 1rem;
     }
@@ -139,7 +130,6 @@
       padding: 1rem;
       border-radius: 1rem;
       transition: transform 0.3s, box-shadow 0.3s;
-      animation: fadeIn 0.5s ease forwards; /* Added fade-in animation */
     }
 
     .grid-item:hover {
@@ -181,7 +171,7 @@
       <img src="https://i.pinimg.com/736x/3e/dc/6c/3edc6c2847921b7a28f02c261e6f51e2.jpg" alt="Profile Picture" class="profile-pic" />
       <div class="info">
         <h1>Umesh Sharma</h1>
-        <p>In the realm of code and tech, I weave tales of resilience and whispers of the unseen, embracing the darkness and finding solace in the beautiful chaos of life.</p>
+        <p>In a world of chaos, I dwell in shadows, seeking beauty in the pain and whispers of the lost.</p>
         <div class="social-links">
           <a href="https://www.instagram.com/reappoint3d"><img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" alt="Instagram" width="24" /></a>
           <a href="https://last.fm/user/k0q"><img src="https://img.icons8.com/ios-filled/50/ffffff/lastfm.png" alt="Last.fm" width="24" /></a>
@@ -196,19 +186,19 @@
     <div class="grid">
       <div class="grid-item">
         <img src="https://img.icons8.com/ios-filled/50/ffffff/music.png" alt="Music" width="32" />
-        <span>Exploring Sounds</span>
+        <span>Lost in Melodies</span>
       </div>
       <div class="grid-item">
         <img src="https://img.icons8.com/ios-filled/50/ffffff/book.png" alt="Book" width="32" />
-        <span>Student</span>
+        <span>Dark Literary Escapes</span>
       </div>
       <div class="grid-item">
         <img src="https://img.icons8.com/ios-filled/50/ffffff/new-moon.png" alt="Moon" width="32" />
-        <span>Embracing Shadows</span>
+        <span>Embracing the Void</span>
       </div>
       <div class="grid-item">
         <img src="https://img.icons8.com/ios-filled/50/ffffff/headphones.png" alt="Headphones" width="32" />
-        <span>Lost in Dark Melodies</span>
+        <span>Exploring the Abyss</span>
       </div>
     </div>
   </div>
